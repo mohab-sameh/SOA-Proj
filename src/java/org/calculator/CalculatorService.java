@@ -8,7 +8,7 @@ package org.calculator;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-
+import java.lang.Math;
 /**
  *
  * @author Mohab
@@ -16,23 +16,6 @@ import javax.jws.WebParam;
 @WebService(serviceName = "CalculatorService")
 public class CalculatorService {
 
-    /**
-     * This is a sample web service operation
-     */
-    @WebMethod(operationName = "hello")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
-    }
-
-    /**
-     * Web service operation
-     */
-    @WebMethod(operationName = "Add")
-    public double Add(@WebParam(name = "n1") double n1, @WebParam(name = "n2") double n2) {
-        //TODO write your implementation code here:
-        double result=n1+n2;
-        return result;
-    }
 
     /**
      * Web service operation
@@ -63,4 +46,13 @@ public class CalculatorService {
         double result=n1/n2;
         return result;
     }
+    
+    
+    @WebMethod(operationName = "SquareRoot")
+    public double SquareRoot(@WebParam(name = "n1") double n1, @WebParam(name = "n2") double n2) {
+        //TODO write your implementation code here:
+        double result=n1/n2;
+        return result;
+    
+    
 }
